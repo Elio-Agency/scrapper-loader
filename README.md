@@ -1,64 +1,61 @@
-# Booking.com listings — Modal job
+# Booking.com Milan scraper
 
-Daily scrape of Booking.com search results. Each run looks up **tomorrow’s check-in**, **1 night**, **1 adult**, and **appends** rows into DuckDB. Duplicates are kept in the warehouse; the Streamlit dashboard (`../dashboard`) shows unique properties.
+Playwright scrapers for Milan hotel search on Booking.com, plus a Streamlit dashboard. Default stay is **24–30 Sep 2026**, 1 night, 1 adult, GBP.
 
-## How it works
+Do not scrape unless you intend to. Booking may show a captcha.
 
-1. Modal runs `listings.py` on a schedule (`06:00 UTC` by default).
-2. Playwright opens Booking.com search, paginates (offset / load more / filter slices), and extracts listing cards.
-3. Rows are written to DuckDB at `/data/booking.duckdb` on a **Modal Volume** (`milan-listings-duckdb`). The volume persists between runs so history is not wiped.
-4. `volume.commit()` saves the file after the scrape.
+## Layout
 
-The scraper does not talk to an official Booking API. It reads the public search page.
+```text
+scrape/          Search + hotel-page scrapers, enrich, merge
+dashboard/       Streamlit app (deploy this folder)
+vm/              GCP VM run scripts (copies scrape/ onto the VM)
+gcp/             Create the Compute Engine VM
+outputs/         Local scrape files (gitignored)
+archive/         Older Modal / probe / Geneva experiments
+```
 
-DuckDB is a **file**, not a server. The dashboard can only read it if that file is on the same machine, or if you copy it (or point `DUCKDB_PATH` at a snapshot). While a scrape is writing, a dashboard connection can fail because DuckDB takes an exclusive write lock.
+Secrets stay in `.env` (gitignored). Copy `.env.example`.
 
-## Files
-
-| File | Role |
-| --- | --- |
-| `modal_app.py` | Modal image, volume, cron, and entrypoints |
-| `listings.py` | Playwright search scrape |
-| `warehouse.py` | Append / query DuckDB |
-| `config.py` | `DUCKDB_PATH` and optional proxy |
-| `query_listings.py` | Quick local counts |
-
-## Setup (do not run a scrape unless you intend to)
+## Scrape (local)
 
 ```powershell
-cd c:\Users\jeeva\Documents\scrapper\modal
+python -m venv .venv
+.\.venv\Scripts\activate
 pip install -r requirements.txt
-modal setup
+python -m playwright install chromium
+
+python scrape/scrape_one_property.py --from-date 2026-09-24
+python scrape/scrape_range.py --from-date 2026-09-24 --to-date 2026-09-24 --max-offset 0
+python scrape/enrich_week.py --dir outputs --from-date 2026-09-24 --limit 5
+python scrape/load_enriched_week.py
 ```
 
-Optional proxy: copy `.env.example` to `.env` and fill `PROXY_SERVER` / `PROXY_USERNAME` / `PROXY_PASSWORD`. On Modal, put those in a **Secret** instead of a local `.env`.
+Search writes price, tax, distance, and beds to `outputs/`. Address and amenities are filled by `enrich_week.py` into `outputs/enriched/`.
 
-## Commands
+## Dashboard
 
 ```powershell
-# Deploy the scheduled job
-modal deploy modal_app.py
-
-# One-off scrape (writes to the Volume)
-modal run modal_app.py
-
-# Peek counts in the Volume DuckDB
-modal run modal_app.py::peek_duckdb
+cd dashboard
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-Local test (uses `booking.duckdb` in this folder unless `DUCKDB_PATH` is set):
+The app reads `dashboard/listings_week_merged.csv`. After a new enrich, run `python scrape/load_enriched_week.py` from the repo root.
+
+## GCP VM
 
 ```powershell
-python listings.py
-python query_listings.py
+.\gcp\create_vm.ps1 -Zone europe-west1-b -MachineType n2-standard-16
+.\vm\copy_to_vm.ps1
 ```
 
-## Reading the data from the dashboard
+On the VM the pack is flattened into `~/scrapper/` (same as before). See `vm/README.md`.
 
-The Streamlit app in `../dashboard` looks for DuckDB in this order:
+```bash
+gcloud compute instances stop booking-scrape-1 --zone=europe-west1-b
+```
 
-1. `DUCKDB_PATH`
-2. `../booking.duckdb` (project root)
-3. `../modal/booking.duckdb`
+## GitHub
 
-To host the dashboard against the Modal Volume, run Streamlit on Modal with the same volume mounted, or download `/data/booking.duckdb` after each scrape and set `DUCKDB_PATH`.
+Do not commit `.env`, DuckDB files, or `outputs/`. The merged dashboard CSV is allowed so Streamlit Cloud can load data.

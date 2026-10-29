@@ -1,5 +1,24 @@
-# Modal daily listing job
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+vm/.env
+
 *.duckdb
 *.duckdb.wal
-.env
-__pycache__/
+
+outputs/**
+!outputs/.gitkeep
+*.csv
+*.xlsx
+!dashboard/listings_week_merged.csv
+!dashboard/listings_week_merged.xlsx
+
+debug_shots/
+*.html
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

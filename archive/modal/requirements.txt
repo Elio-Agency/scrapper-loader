@@ -1,0 +1,5 @@
+playwright>=1.40.0
+pandas>=2.0.0
+duckdb>=1.0.0
+python-dotenv>=1.0.0
+modal>=0.64.0

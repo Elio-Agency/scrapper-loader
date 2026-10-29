@@ -1,0 +1,267 @@
+{
+  "scope": "Milan feasibility",
+  "checkin": "2026-09-28",
+  "checkout": "2026-09-30",
+  "search_url_template": "https://www.booking.com/searchresults.en-gb.html?ss=Milan&ssne=Milan&ssne_untouched=Milan&dest_type=city&checkin=2026-09-28&checkout=2026-09-30&group_adults=2&no_rooms=1&group_children=0&selected_currency=GBP&lang=en-gb",
+  "search": {
+    "url_final": "https://www.booking.com/searchresults.en-gb.html?ss=Milan&ssne=Milan&ssne_untouched=Milan&dest_type=city&checkin=2026-09-28&checkout=2026-09-30&group_adults=2&no_rooms=1&group_children=0&selected_currency=GBP&lang=en-gb&chal_t=1789393667818&force_referer=",
+    "captcha": false,
+    "blocked_hint": false,
+    "page_title": "Booking.com: Search results: Milan. Book your hotel now!",
+    "html_len": 2055558,
+    "html_snippet": "<!DOCTYPE html><html lang=\"en-gb\" prefix=\"og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# booking_com: http://ogp.me/ns/fb/booking_com#\" class=\" b_chrome b_chrome_124 supports_inline-block supports_flexbox_unprefixed supports_fontface hasJS\" dir=\"ltr\"><head profile=\"http://a9.com/-/spec/opensearch/1.1/\"> <script async=\"\" src=\"https://bat.bing.com/p/conversions/t/15005356\" class=\"optanon-category-C0004 ot-vscat-C0004 \"></script><script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmana",
+    "property_cards_found": 50,
+    "hotel_link_count": 127,
+    "result_header": "Milan: 3,913 properties found",
+    "field_presence_in_first_n": {
+      "title": 12,
+      "address": 0,
+      "review_score": 10,
+      "price": 12,
+      "distance": 12,
+      "stars_or_rating": 0,
+      "property_url": 12,
+      "badge_sponsored": 0,
+      "availability_nudge": 12
+    },
+    "sample_cards": [
+      {
+        "title": "Hotel Lume",
+        "address": null,
+        "review_block": "Scored 8.6 8.6 Fabulous 15 reviews",
+        "price": "£391",
+        "distance": "4 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/lume-milano.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "Hotel Lume",
+        "address": null,
+        "review_block": "Scored 8.6 8.6 Fabulous 15 reviews",
+        "price": "£391",
+        "distance": "4 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/lume-milano.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "PrimoPiano - Antonelli",
+        "address": null,
+        "review_block": null,
+        "price": "£190",
+        "distance": "3.7 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/primopiano-antonelli.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "PrimoPiano - Antonelli",
+        "address": null,
+        "review_block": null,
+        "price": "£190",
+        "distance": "3.7 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/primopiano-antonelli.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "UNA Hotels Galles Milano",
+        "address": null,
+        "review_block": "Scored 8.3 8.3 Very good 5,973 reviews",
+        "price": "£706",
+        "distance": "2.5 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/unahotels-galles-milano.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "UNA Hotels Galles Milano",
+        "address": null,
+        "review_block": "Scored 8.3 8.3 Very good 5,973 reviews",
+        "price": "£706",
+        "distance": "2.5 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/unahotels-galles-milano.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "Cozy House XXII March-15 min to Duomo",
+        "address": null,
+        "review_block": "Exceptional 9.9 39 external reviews",
+        "price": "£208",
+        "distance": "2.6 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/cozy-house-xxii-march-15-min-to-duomo-milano1.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "Cozy House XXII March-15 min to Duomo",
+        "address": null,
+        "review_block": "Exceptional 9.9 39 external reviews",
+        "price": "£208",
+        "distance": "2.6 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/cozy-house-xxii-march-15-min-to-duomo-milano1.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "RELSTAY - Affori",
+        "address": null,
+        "review_block": "Scored 10 10 Exceptional 10 reviews",
+        "price": "£193",
+        "distance": "5.2 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/relstay-dergano.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "RELSTAY - Affori",
+        "address": null,
+        "review_block": "Scored 10 10 Exceptional 10 reviews",
+        "price": "£193",
+        "distance": "5.2 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/relstay-dergano.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "Radisson Collection Hotel, Santa Sofia Milan",
+        "address": null,
+        "review_block": "Scored 9.0 9.0 Superb 3,590 reviews",
+        "price": "£1,734",
+        "distance": "0.9 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/radisson-collection-santa-sofia-milan.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      },
+      {
+        "title": "Radisson Collection Hotel, Santa Sofia Milan",
+        "address": null,
+        "review_block": "Scored 9.0 9.0 Superb 3,590 reviews",
+        "price": "£1,734",
+        "distance": "0.9 km from centre",
+        "stars_block": null,
+        "property_url": "https://www.booking.com/hotel/it/radisson-collection-santa-sofia-milan.en-gb.html",
+        "sponsored": false,
+        "availability_hint": "See availability"
+      }
+    ]
+  },
+  "properties": [
+    {
+      "requested_url": "https://www.booking.com/hotel/it/lume-milano.en-gb.html",
+      "final_url": "https://www.booking.com/hotel/it/lume-milano.en-gb.html?checkin=2026-09-28&checkout=2026-09-30&group_adults=2&no_rooms=1&group_children=0&sb_price_type=total&lang=en-gb&selected_currency=GBP",
+      "captcha": false,
+      "blocked_hint": false,
+      "redirected_off_property": false,
+      "page_title": "Hotel Lume, Milan (updated prices 2026)",
+      "html_len": 1544735,
+      "name": "Hotel Lume",
+      "address": null,
+      "review": "8.6 Fabulous · 15 reviews",
+      "stars": null,
+      "room_card_count": 0,
+      "hprt_row_count": 2,
+      "rooms_sample": [
+        {
+          "layout": "hprt",
+          "name": "Quadruple Room",
+          "price": "£391",
+          "sold_out": false
+        },
+        {
+          "layout": "hprt",
+          "name": null,
+          "price": "£414",
+          "sold_out": false
+        }
+      ],
+      "facilities_section_present": true,
+      "map_entry_present": false,
+      "policies_section_present": true,
+      "jsonld_types": [
+        {
+          "@type": "Hotel",
+          "keys": [
+            "@context",
+            "@type",
+            "address",
+            "aggregateRating",
+            "description",
+            "image",
+            "name",
+            "priceRange",
+            "url"
+          ]
+        }
+      ]
+    },
+    {
+      "requested_url": "https://www.booking.com/hotel/it/lume-milano.en-gb.html",
+      "final_url": "https://www.booking.com/hotel/it/lume-milano.en-gb.html?checkin=2026-09-28&checkout=2026-09-30&group_adults=2&no_rooms=1&group_children=0&sb_price_type=total&lang=en-gb&selected_currency=GBP",
+      "captcha": false,
+      "blocked_hint": false,
+      "redirected_off_property": false,
+      "page_title": "Hotel Lume, Milan (updated prices 2026)",
+      "html_len": 1577287,
+      "name": "Hotel Lume",
+      "address": null,
+      "review": "8.6 Fabulous · 15 reviews",
+      "stars": null,
+      "room_card_count": 0,
+      "hprt_row_count": 2,
+      "rooms_sample": [
+        {
+          "layout": "hprt",
+          "name": "Quadruple Room",
+          "price": "£391",
+          "sold_out": false
+        },
+        {
+          "layout": "hprt",
+          "name": null,
+          "price": "£414",
+          "sold_out": false
+        }
+      ],
+      "facilities_section_present": true,
+      "map_entry_present": false,
+      "policies_section_present": true,
+      "jsonld_types": [
+        {
+          "@type": "Hotel",
+          "keys": [
+            "@context",
+            "@type",
+            "address",
+            "aggregateRating",
+            "description",
+            "image",
+            "name",
+            "priceRange",
+            "url"
+          ]
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "milan_search_cards_scrapable": true,
+    "milan_hotel_urls_discoverable": true,
+    "property_page_scrapable": true,
+    "room_prices_observed": true,
+    "notes": []
+  }
+}

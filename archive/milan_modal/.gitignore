@@ -1,0 +1,5 @@
+# Modal daily Milan listing job
+*.duckdb
+*.duckdb.wal
+.env
+__pycache__/

@@ -1,0 +1,5 @@
+# Modal daily listing job
+*.duckdb
+*.duckdb.wal
+.env
+__pycache__/
